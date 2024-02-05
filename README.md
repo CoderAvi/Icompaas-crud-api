@@ -1,0 +1,1 @@
+Created a CRUD API service for User Account Creation (email, first name, last name, and password) and deploy it to Lambda using serverless framework. used RDS for data storage. These API having all kinds of validations checks for each methods.
