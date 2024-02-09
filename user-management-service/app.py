@@ -158,29 +158,21 @@ def update_user():
 
         existing_first_name, existing_last_name, existing_password = existing_user[1], existing_user[2], existing_user[3]
 
+        # Encrypt the password with SHA-256
+        password_hash = existing_password  # Default to existing password
+        if password is not None:
+            password_hash = hashlib.sha256(password.encode()).hexdigest()
+
         # Check if details remain unchanged
         if (
-            (first_name == existing_first_name or first_name is None) and
-            (last_name == existing_last_name or last_name is None) and
-            (password == existing_password or password is None)
+            (first_name == existing_first_name if first_name is not None else True) and
+            (last_name == existing_last_name if last_name is not None else True) and
+            (password_hash == existing_password)
         ):
             return make_response(jsonify(status='success', message='User details remain unchanged'), 200)
 
         # Update user fields
-        update_query = "UPDATE USER SET"
-
-        if first_name:
-            update_query += f" firstname = '{first_name}',"
-        if last_name:
-            update_query += f" lastname = '{last_name}',"
-        if password:
-            update_query += f" password = '{password}',"
-
-        # Remove the trailing comma
-        update_query = update_query.rstrip(',')
-
-        update_query += f" WHERE email_id = '{email}'"
-
+        update_query = f"UPDATE USER SET firstname = '{first_name}', lastname = '{last_name}', password = '{password_hash}' WHERE email_id = '{email}'"
         cursor.execute(update_query)
         conn.commit()
 
@@ -191,7 +183,6 @@ def update_user():
 
     except Exception as e:
         return make_response(jsonify(status='error', error_message=str(e)), 500)
-
 
 # Delete user
 @app.route("/users", methods=["DELETE"])

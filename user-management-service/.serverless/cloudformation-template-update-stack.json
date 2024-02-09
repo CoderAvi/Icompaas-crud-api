@@ -162,7 +162,7 @@
           "S3Bucket": {
             "Ref": "ServerlessDeploymentBucket"
           },
-          "S3Key": "serverless/user-management-service/dev/1707157422761-2024-02-05T18:23:42.761Z/user-management-service.zip"
+          "S3Key": "serverless/user-management-service/dev/1707494587417-2024-02-09T16:03:07.417Z/user-management-service.zip"
         },
         "Handler": "wsgi_handler.handler",
         "Runtime": "python3.9",
@@ -183,14 +183,14 @@
         "IcompaasDashAPILogGroup"
       ]
     },
-    "IcompaasDashAPILambdaVersionad5wW6J5orsp45qVFvQrUcsP1VLCiN0MnuabmjoIPM": {
+    "IcompaasDashAPILambdaVersion6ItU5OyC9bzzRnvbekbfhE1BeyRk6EpfcoZyTU5Q": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "IcompaasDashAPILambdaFunction"
         },
-        "CodeSha256": "ON6mLSq9h/IKJcaNJe1QjnTXc+zYWADb3CqNI8JOVEI="
+        "CodeSha256": "ncnvEJqfhsPIFFqXcjCWu4VLkZFusvc6Ir3wkbRqriU="
       }
     },
     "HttpApi": {
@@ -301,7 +301,7 @@
     "IcompaasDashAPILambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "IcompaasDashAPILambdaVersionad5wW6J5orsp45qVFvQrUcsP1VLCiN0MnuabmjoIPM"
+        "Ref": "IcompaasDashAPILambdaVersion6ItU5OyC9bzzRnvbekbfhE1BeyRk6EpfcoZyTU5Q"
       },
       "Export": {
         "Name": "sls-user-management-service-dev-IcompaasDashAPILambdaFunctionQualifiedArn"
