@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "397d00b8-ae00-4d91-afb8-2e385bd69ec3",
+		"name": "icompaas-api-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28068983"
+	},
+	"item": [
+		{
+			"name": "get user by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user api bad request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1mail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1mail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get request no user found",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test12@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test12@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"Ram@gmail.com\",\n    \"first_name\" : \"ram\",\n    \"last_name\":\"kumar\",\n    \"password\":\"test@65477\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user empty data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"Ram@gmail.com\",\n    \"first_name\" : \"\",\n    \"last_name\":\"kumar\",\n    \"password\":\"test@65477\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user already exist data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"Ram@gmail.com\",\n    \"first_name\" : \"ram\",\n    \"last_name\":\"kumar\",\n    \"password\":\"test@65477\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user first_name",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\" : \"Abhinav\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user email id updating bad request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"kumar@gmail.com\",\n    \"first_name\" : \"Abhinav\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "missing emain in query param",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \n    \"first_name\" : \"Abhinav\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by user email",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "already deleed user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users?email=test1@gmail.com",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "test1@gmail.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete all user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://kw8b65ca26.execute-api.us-east-1.amazonaws.com/users",
+					"protocol": "https",
+					"host": [
+						"kw8b65ca26",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

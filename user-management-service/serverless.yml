@@ -12,10 +12,10 @@ provider:
 
 functions:
   icompaas-API:
-    name: icompaas-API   # Change this to your desired custom name
+    name: icompaas-API   # for custom lambda function name
     handler: wsgi_handler.handler
     layers:
-      - arn:aws:lambda:us-east-1:216320741878:layer:pymysql:2 # Replace with your PyMySQL layer ARN
+      - arn:aws:lambda:us-east-1:216320741878:layer:pymysql:2 
     events:
       - httpApi:
           path: /users
