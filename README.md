@@ -1,5 +1,5 @@
 Created a CRUD API service for User Account Creation (email, first name, last name, and password) and deploy it to Lambda using serverless framework. used RDS for data storage. These API having all kinds of validations checks for each methods.
-used serverless framework for deployment of this API. Used pytest for unit testing and added all cases for this API. These API passes all unit test cases. 
+used serverless framework for deployment of this API. Used pytest for unit testing and added all types of test cases for this API. These API passes all unit test cases. 
 Added postman collection for all API methods (GET, POST, PUT, DELETE).
 
 find below some screenshots of successfull API call in postman.
