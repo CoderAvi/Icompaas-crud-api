@@ -79,10 +79,6 @@ def create_user():
         return make_response(jsonify(status='error', error_message=str(e)), 500)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
-
-
 # Get all users or a specific user by email
 @app.route("/users", methods=["GET"])
 def get_users():

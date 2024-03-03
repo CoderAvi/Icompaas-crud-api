@@ -174,7 +174,7 @@
                 "S3Bucket": {
                   "Ref": "ServerlessDeploymentBucket"
                 },
-                "S3Key": "serverless/user-management-service/dev/1707494587417-2024-02-09T16:03:07.417Z/user-management-service.zip"
+                "S3Key": "serverless/user-management-service/dev/1709475264296-2024-03-03T14:14:24.296Z/user-management-service.zip"
               },
               "Handler": "wsgi_handler.handler",
               "Runtime": "python3.9",
@@ -195,14 +195,14 @@
               "IcompaasDashAPILogGroup"
             ]
           },
-          "IcompaasDashAPILambdaVersion6ItU5OyC9bzzRnvbekbfhE1BeyRk6EpfcoZyTU5Q": {
+          "IcompaasDashAPILambdaVersionolGLM50UfxNlJmLjxLC37J2zOmBuZKZ4D3BVoeXK6w": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "IcompaasDashAPILambdaFunction"
               },
-              "CodeSha256": "ncnvEJqfhsPIFFqXcjCWu4VLkZFusvc6Ir3wkbRqriU="
+              "CodeSha256": "2059HPsUVs0HaW7ciCUKI9WkIKSenZ9c4GS1WXSmuR4="
             }
           },
           "HttpApi": {
@@ -310,7 +310,7 @@
           "IcompaasDashAPILambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "IcompaasDashAPILambdaVersion6ItU5OyC9bzzRnvbekbfhE1BeyRk6EpfcoZyTU5Q"
+              "Ref": "IcompaasDashAPILambdaVersionolGLM50UfxNlJmLjxLC37J2zOmBuZKZ4D3BVoeXK6w"
             },
             "Export": {
               "Name": "sls-user-management-service-dev-IcompaasDashAPILambdaFunctionQualifiedArn"
@@ -468,7 +468,7 @@
         "timeout": 6,
         "runtime": "python3.9",
         "vpc": {},
-        "versionLogicalId": "IcompaasDashAPILambdaVersion6ItU5OyC9bzzRnvbekbfhE1BeyRk6EpfcoZyTU5Q"
+        "versionLogicalId": "IcompaasDashAPILambdaVersionolGLM50UfxNlJmLjxLC37J2zOmBuZKZ4D3BVoeXK6w"
       }
     },
     "configValidationMode": "warn",
@@ -494,7 +494,7 @@
     "artifact": "/Users/coderavi/Downloads/icompaas-crud-api/user-management-service/.serverless/user-management-service.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/user-management-service/dev/1707494587417-2024-02-09T16:03:07.417Z",
+    "artifactDirectoryName": "serverless/user-management-service/dev/1709475264296-2024-03-03T14:14:24.296Z",
     "artifact": "user-management-service.zip"
   }
 }
